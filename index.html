@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+  <html lang="ja">
+   <head>
+     <!-- <meta 属性="属性値">
+          meta要素は文書における様々なメタデータ(文書の文字コードや文書の
+          概要、キーワードなどの文書に関する情報のこと)を表す。-->
+    <meta charset="UTF-8"　/> <!--charsetは文書の文字コードを指定する-->
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <!--nameで名前を付与することでメタデータの種類を示す
+         content属性で内容を表す。
+         name="viewportでスマホやタブレット向けに文書の表示方法を指定
+         今回はwidth=device-widthを指定することで端末に合わせて表示される
+         同時にwebページが表示される倍率は1を指定する-->
+     <title>9章【「トップへ戻る」ボタンを作ってみよう】</title>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <h1>9章【「トップへ戻る」ボタンを作ってみよう】</h1>
+     
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+     
+     <span id="back">
+       <!--spanタグはclassでも良いが、idの方が若干処理速度が速い
+           また、classは複数指定できてしまうので、一意のidを使っている-->
+       <a href="#"> <!--そのページの最上層へ移動するリンク-->
+         <img src="img/arrow.png" alt="">
+       </a>
+     </span>
+     
+     <script src="js/jquery.min.js"></script>
+     <script src="js/script.js"></script>
+   </body>
+ </html>

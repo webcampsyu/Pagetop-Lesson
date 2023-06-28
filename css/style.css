@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/*外部コードの文字コード指定
+ スタイルシートがhtmlとは分離したファイルに存在する場合
+ 文字コードを決定しなければならない
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*リセットcss
+ [margin: 0]と[padding: 0]を記述することでページの左端と要素との間の
+ 隙間をなくすことが出来る
+ [box-sizing]のデフォルト値は[box-sizing: content-box;]
+ [box-sizing: border-box]との違い
+ 
+ content-boxの場合
+ paddingとborderの分だけコンテンツ(要素)の横幅や高さが大きくなる
+ 要素の領域[横幅]=width+両サイドのpadding+両サイドのborder
+ 
+ border-boxの場合
+ 要素の横幅や高さは変化せずボックスの中にpaddingとborderを含む
+ つまり、要素の横幅や高さが意図したとおりに指定される
+ 要素の領域[横幅]=width
+*/
+h1 {
+  text-align: center;
+  /*text-alignはブロック要素またはセルボックス内における
+  インラインレベルコンテンツの水平方向の配置を設定*/
+  margin: 50px 0;
+}
+.box {
+  height: 300px;
+  width: 600px;
+  margin: 0 auto 50px;
+  background-color: #eee;
+}
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+/*position: fixed;を指定することで「トップへ戻る」ボタンは常に同じ位置
+right: 20px;とbottom: 20px;つまりページ右下20pxの位置*/
+#back img {
+  width: 50px;
+}
